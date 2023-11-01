@@ -1,0 +1,142 @@
+  body
+  {
+   background-image:url(../Images/backgnd.gif);
+  }
+  
+  .MainContainer
+  {  
+	 width:900px;
+
+     margin:10px auto 0px auto;
+
+	text-align:center;
+	
+	}
+  
+  .Logo{}
+  .Title1{  font-weight:bold;  font-size:large }
+  .Title2{text-decoration: underline; font-weight:bold; font-family: Arial}
+  .Query
+{  width:800px;
+    margin:10px auto 0px auto;
+	 background-color:#F5FFFA;
+
+}
+
+  .Query th
+{
+	
+}
+
+  .Query td
+{   text-align:left;
+	vertical-align:middle;
+}
+
+ .Query tr
+{  
+	vertical-align:middle;
+}
+
+ .Result th
+{
+	
+}
+
+  .Result td
+{   
+	vertical-align:middle;
+}
+
+ .Result tr
+{  
+	vertical-align:middle;
+}
+
+.btn-list
+    { display:block;      margin-left:10px;
+      text-align:center
+    }
+ 
+        .btn-list input,  .btn-list span
+        {
+               
+      display:inline-block;
+      /*margin-left:10px;*/
+      height:auto;
+      margin-top:10px;
+      font-size:18px;border:none;
+      border-radius:3px;
+      white-space:pre-wrap; 
+      padding:10px;
+       max-width:25%
+        }
+.eng
+{
+font-size:70%;
+
+}
+.por
+{
+font-size:80%;
+font-family:   sans-serif; 
+
+}
+.refreshBtn
+{
+width:30px;
+height:30px;
+vertical-align:middle;
+}
+
+ .cBlue
+        {color:blue;
+         font-weight:bold;
+          
+        }     
+           .cRed
+        {color:red;
+         font-weight:bold;
+          
+        }.cDarkBlue
+        {color:darkblue;
+         font-weight:bold;
+          
+        }
+         .cGreen
+        {color:green;
+         font-weight:bold;
+         font-size:larger;
+        }  
+           .cSmall
+        { 
+         font-size:smaller;
+        }
+.cBig
+{
+font-size:130%;}
+.tableTopBorder
+{
+    border-top:solid gray 1px;
+}
+.menuTag,.menuTag span
+{font-size:90%;
+}
+.halfBR
+{
+display: block;  
+            content: "";  
+            margin-top: 9px;}
+
+
+@media (max-width: 610px)
+{
+    .table1 > tbody > tr > td.menuTd
+    {
+        display: block;
+    }
+}
+.longInput {
+width:70%}
+.grayText {
+color:gray;}
