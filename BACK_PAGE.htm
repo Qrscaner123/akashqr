@@ -265,10 +265,13 @@
 		<td style="height: 30px ;" width="950" align="center" class="cSmall tableTopBorder">查詢日期 / 
  <span class="por cSmall">
                                            Data de pesquisa / </span><span class="eng">
-                                        Date of Inquiry:       </span>   <br> <span id="demo"></span> 
+                                        Date of Inquiry:       </span>   <br> <span id="formattedDate"></span> 
 			                 <script>
-                                            const d = new Date(day,month,year,dhours,minutes);
-                                            document.getElementById("demo").innerHTML = d;
+                                          //  const d = new Date(day,month,year,dhours,minutes);
+                                           // document.getElementById("demo").innerHTML = d;
+						 const date = new Date();
+                                                 const formattedDate = date.toLocaleDateString();
+						 console.log(formattedDate);
                                             </script>                  
                         </td>
 	</tr>
