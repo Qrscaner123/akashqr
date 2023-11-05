@@ -266,16 +266,22 @@
  <span class="por cSmall">
                                            Data de pesquisa / </span><span class="eng">
                                         Date of Inquiry:       </span>   <br> <span id="formattedDate"></span> 
-			                 <script>
-                                         //const d = new Date();
-                                            //document.getElementById("demo").innerHTML = d;
-						 const date = new Date();
-						 const formattedDate = date.toLocaleDateString();
-						 console.log(formattedDate); 
-						 //const date = new Date();
-                                                // const formattedDate = date.toLocaleDateString();
-						// console.log(formattedDate);
-                                            </script>                  
+			  <span id="currentDate">
+
+                                        </span >  <span id="currentTime">
+
+                                        </span>
+			                <script>
+                                        const currentDate = new Date();
+                                        const formattedDate = currentDate.toLocaleDateString();
+                                         document.getElementById("currentDate").textContent= formattedDate;
+                                         </script>
+                                            <script>
+                                                
+                                                const currentTime = new Date();
+                                         const formattedTime = currentTime.toLocaleTimeString();
+                                        document.getElementById("currentTime").textContent= formattedTime;
+                                          </script>                 
                         </td>
 	</tr>
 	<tr>
