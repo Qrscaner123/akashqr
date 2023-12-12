@@ -157,7 +157,20 @@
         }
 
     </style>
+
+	
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script>
+  $( function() {
+    $( "#datepicker" ).datepicker();
+  } );
+  </script>
+
+	
+	
+	<script>
         $(function () {
             $("#txtBirth").datepicker({
                 changeMonth: true,
@@ -225,7 +238,7 @@ Please enter the following information for inquiry:</span><br>            <br>  
                                       
                                          
                                             持證人出生日期 (DD/MM/YYYY)<br><span class="por">
-                                        Data de nascimento do titular de TI/TNR (DD/MM/AAAA) <br></span><span class="eng">
+                                        Data de nascimento do titular de TI/TNR (DD/MM/AAAA) <br></span><input type="text" id="datepicker">
                                           Date of Birth of Holder of Card (DD/MM/YYYY)</span>          
                                          
                                     </td>
