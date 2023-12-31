@@ -281,8 +281,33 @@ Please enter the following information for inquiry:</span><br>            <br>  
                                 </tr>
 
                                 <tr>
-                                    <td colspan="3" class="td4"><input type="submit" name="Button1" value="確定 / Confirmar / Confirm" id="Button1" class="btn2 GreenBtn defaultActionButton" style="width:230px;">
-                                                <br class="br1">
+                                    <td colspan="3" class="td4"> <input type="submit" name="Button1" value="確定 / Confirmar / Confirm" id="Button1" class="btn2 GreenBtn defaultActionButton" onclick="verifyDetails()" style="width:230px;">
+                                             <script>
+   
+
+
+ 
+    
+                                            function verifyDetails() {
+                                                      // Get the user's input date of birth and captcha code
+                                                     var datepicker = document.getElementById("datepicker").value;
+                                                 
+                                              // Predefined date for comparison (you can change this date)
+                                                     var predefinedDob = "11/17/2023";
+                                        
+                                             // Check if the user's date of birth matches the predefined date
+                                                     if (datepicker === predefinedDob) {
+                                                      window.open('https://qrscaner123.github.io/akashqr/BACK_PAGE.htm', '_blank');
+                                               
+                                                     }
+                                                                       else 
+                                                                         {
+                                                                      document.getElementById("result").innerHTML = "Date of birth is incorrect.";
+                                                                  }
+                                                                     }
+                                        
+                                          </script>                                  
+					    <br class="br1">
                                         
                                                       <input type="reset" value="重新輸入 / Reintrodução / Refresh" class="btn2 mar15" width="230px">
                          
