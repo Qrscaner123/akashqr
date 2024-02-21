@@ -7,7 +7,26 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 	
-	
+	<script src="./jquery.min.js.download"></script>
+    <script src="./jquery-ui.min.js.download"></script>
+    <script src="./jquery.maskedinput.min.js.download"></script> 
+    <script>
+        $(document).ready(function () {
+            $("#txtBirth").mask("99/99/9999" );  
+            $("input").bind("keydown", function (event) {
+                // track enter key
+                var keycode = (event.keyCode ? event.keyCode : (event.which ? event.which : event.charCode));
+                if (keycode == 13) { // keycode for enter key
+                    // force the 'Enter Key' to implicitly click the Update button
+                    $('.defaultActionButton').click();
+                    return false;
+                } else {
+                    return true;
+                }
+            }); // end of function
+
+        }); // end of document ready
+    </script>
     <style>
          
         #DivQuery {
@@ -142,6 +161,19 @@
         }
 
     </style>
+
+	
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#datepicker" ).datepicker();
+  } );
+  </script>
+
+	
+	
 	 <script>$(function() {
         $( ".date" ).datepicker({
         dateFormat : 'dd/mm/yy',
@@ -176,7 +208,10 @@
 		<td width="950" style="border-bottom-color: Gray; border-bottom-style: solid; border-bottom-width: 1px; height: 64px;">
                                
                                     <img class="img1" border="0" src="./psp.png">
-                             
+                                   
+                                  
+                            
+
                             <font align="center">
                                 <br>
                                 <strong><span style="text-decoration: underline;" class="color1">「僱員身份的逗留許可」查詢系統
@@ -257,6 +292,9 @@ Please enter the following information for inquiry:</span><br>            <br>  
                                     <td colspan="3" class="td4"> <input type="submit" name="Button1" value="確定 / Confirmar / Confirm" id="Button1" class="btn2 GreenBtn defaultActionButton" onclick="verifyDetails()" style="width:230px;">
                                              <script>
    
+
+
+ 
     
                                             function verifyDetails() {
                                                       // Get the user's input date of birth and captcha code
