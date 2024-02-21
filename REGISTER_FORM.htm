@@ -3,7 +3,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml"><head id="Head1"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta http-equiv="X-UA-Compatible" content="IE=9,IE=8,IE=7,IE=10,IE=11,IE=12"><title>
 
 </title><link href="./main.css" rel="stylesheet" type="text/css"><link href="./jquery-ui.min.css" rel="stylesheet" type="text/css">
-    <script src="./jquery.min.js.download"></script>
+ <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	
+	<script src="./jquery.min.js.download"></script>
     <script src="./jquery-ui.min.js.download"></script>
     <script src="./jquery.maskedinput.min.js.download"></script> 
     <script>
@@ -170,17 +174,19 @@
 
 	
 	
-	<script>
-        $(function () {
-            $("#txtBirth").datepicker({
-                changeMonth: true,
-                changeYear: true, dateFormat: 'dd/mm/yy',
-                yearRange: "-100:+0"
-                 
-
-            });
-        });
-  </script> 
+	 <script>$(function() {
+        $( ".date" ).datepicker({
+        dateFormat : 'dd/mm/yy',
+       // showOn: "both",
+       // buttonImage: "b_calendar.png",
+       // buttonImageOnly: true,
+       // buttonText: "Select date",
+        changeMonth: true,
+        changeYear: true,
+        yearRange: "-100:+0"
+        }); 
+       });
+</script>  
 </head>
 <body>
     
