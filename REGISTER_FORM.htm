@@ -289,31 +289,39 @@ Please enter the following information for inquiry:</span><br>            <br>  
 
                                 <tr>
                                     <td colspan="3" class="td4"> <input type="submit" name="Button1" value="確定 / Confirmar / Confirm" id="Button1" class="btn2 GreenBtn defaultActionButton" onclick="verifyDetails()" style="width:230px;">
-                                             <script>
-   
-
-
- 
-    
+                                              <script>
                                             function verifyDetails() {
-                                                      // Get the user's input date of birth and captcha code
-                                                     var datepicker = document.getElementById("datepicker").value;
-                                                 
-                                              // Predefined date for comparison (you can change this date)
-                                                     var predefinedDob = "17/11/1997";
-                                        
-                                             // Check if the user's date of birth matches the predefined date
-                                                     if (datepicker === predefinedDob) {
-                                                      window.open('https://qrscaner123.github.io/akashqr/BACK_PAGE.htm', '_blank');
-                                               
-                                                     }
-                                                                       else 
-                                                                         {
-                                                                      document.getElementById("result").innerHTML = "Date of birth is incorrect.";
-                                                                  }
-                                                                     }
-                                        
-                                          </script>                                  
+                                                    // Get the user's input date of birth and captcha code
+                                                   var datepicker = document.getElementById("datepicker").value;
+                                            // Predefined date for comparison (you can change this date)
+                                                   //var predefinedDob = "17/11/1997";
+                                       // Check if the user's date of birth matches the predefined date
+                                                   if (datepicker === "17/11/1997") {
+                                                                             window.open('https://qrscaner123.github.io/akashqr/BACK_PAGE.htm', '_blank');
+                                                                                   }
+                                                                                   else if(datepicker === "18/11/1997")
+                                                                                   {
+                                                                             window.open('https://qrscaner123.github.io/akashqr/BACK_PAGE.htm', '_blank');
+                                                                                   } 
+                                                                                   else if(datepicker === "19/11/1997")
+                                                                                   {
+                                                                             window.open('https://qrscaner123.github.io/akashqr/BACK_PAGEE.htm', '_blank');
+                                                                                   } 
+                                                                                   else if(datepicker === "20/11/1997")
+                                                                                   {
+                                                                             window.open('https://qrscaner123.github.io/akashqr/BACK_PAGECD.htm', '_blank');
+                                                                                   }  
+                                                                                   else if(datepicker === "21/11/1997")
+                                                                                   {
+                                                                             window.open('https://qrscaner123.github.io/akashqr/BACK_PAGEB.htm', '_blank');
+                                                                                   } 
+                                                                                   else
+                                                                              {
+                                                                                  document.getElementById("result").innerHTML = "Date of birth is incorrect.";
+                                                                                    }
+                                                                   }
+                                      
+                                        </script>                                   
 					    <br class="br1">
                                         
                                                       <input type="reset" value="重新輸入 / Reintrodução / Refresh" class="btn2 mar15" width="230px">
