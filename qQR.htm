@@ -1,4 +1,210 @@
 <!DOCTYPE html>
+<!-- saved from url=(0083)https://www.fsm.gov.mo/psp/SMGQuerySystem2/tnrquery6/qQR.aspx?k=24291254DHK1Ma68D1# -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head id="Head1"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta http-equiv="X-UA-Compatible" content="IE=9,IE=8,IE=7,IE=10,IE=11,IE=12"><title>
+
+</title><link href="./main.css" rel="stylesheet" type="text/css"><link href="./jquery-ui.min.css" rel="stylesheet" type="text/css">
+ <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+	
+	<script src="./jquery.min.js.download"></script>
+    <script src="./jquery-ui.min.js.download"></script>
+    <script src="./jquery.maskedinput.min.js.download"></script> 
+    <script>
+        $(document).ready(function () {
+            $("#txtBirth").mask("99/99/9999" );  
+            $("input").bind("keydown", function (event) {
+                // track enter key
+                var keycode = (event.keyCode ? event.keyCode : (event.which ? event.which : event.charCode));
+                if (keycode == 13) { // keycode for enter key
+                    // force the 'Enter Key' to implicitly click the Update button
+                    $('.defaultActionButton').click();
+                    return false;
+                } else {
+                    return true;
+                }
+            }); // end of function
+
+        }); // end of document ready
+    </script>
+    <style>
+         
+        #DivQuery {
+            margin: 0 auto;
+            position: relative;
+            width: 950px;
+        }
+
+        #DivResult, #TableResult {
+            margin: 0 auto;
+            position: relative;
+            width: 1000px;
+        }
+         
+
+        .td1 {
+            vertical-align:top;
+            width: 310px;
+            text-align: right;  
+            padding-top:10px;
+            padding-bottom:50px;
+        }
+
+        .td2 {
+            vertical-align:top;
+            width: 200px;
+            text-align: left;
+            padding-left: 10px; 
+            padding-top:10px; 
+        }
+
+        .td3 {
+            vertical-align:top; 
+            text-align: left; 
+            padding-top:10px;
+            padding-bottom:50px;
+            color: #000000;
+        }
+
+        .td4 {
+            text-align: center; 
+        }
+
+        .br1 {
+            display: none;
+                                         
+                                           
+                                            持證人出生日期 (DD/MM/YYYY)<br><span class="por">
+                                        Data de nascimento do titular de TI/TNR (DD/MM/AAAA) <br></span><span class="eng">
+                                          Date of Birth of Holder of Card (DD/MM/YYYY)</span>           
+                                         
+                                    </td>
+                                    <td class="td2">
+                         
+                                          
+                                      <input type="text" name="date" class="date" id="datepicker" >
+					
+					     
+			    </br>
+				
+                                        &nbsp;</td>
+                                   
+                                </tr>
+                                <tr>
+                                    <td class="td1">
+                                         
+                                        
+                                         
+                                            驗證碼 <br><span class="por">
+                                            Código de Verificação <br></span><span class="eng">
+                                        Verification Code</span>
+                                    </td>
+                                    <td class="td2">
+                                        <input name="tb_validcode" type="text" maxlength="4" id="tb_validcode" required="" style="width:60px;">
+                                        </td><td class="td3">
+                                       
+						 <img src="https://www.fsm.gov.mo/psp/SMGQuerySystem2/ValidateCode.aspx" align="absmiddle">
+                                        
+                                         <input type="image" name="ImageButton1" id="ImageButton1" class="refreshBtn" src="./refresh.png" style="border-width:0px;">
+                                        
+                                    </td>
+                                    <td> 
+		 <font align="center">
+                                <br>
+                                <strong><span style="text-decoration: underline;" class="color1">「僱員身份的逗留許可」查詢系統
+<br><span class="por"> 
+                                    Sistema de consulta da Autorização de Permanência na qualidade de trabalhador  <br></span><span class="eng">
+
+                                   
+                                    Inquiry System of Authorization to Stay as Worker
+                                </span>
+
+                                </span></strong>
+                            </font>
+
+                                    </td>
+                                </tr>
+                                 
+                                <tr align="center">
+                                    <td colspan="3" style="border-bottom-color: Gray; border-bottom-style: solid; border-bottom-width: 1px">
+                                        <span id="ErrMsg" style="color:Red;"></span>
+                                         &nbsp; &nbsp; &nbsp;
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td colspan="3" class="td4"> <input type="submit" name="Button1" value="確定 / Confirmar / Confirm" id="Button1" class="btn2 GreenBtn defaultActionButton" onclick="verifyDetails()" style="width:230px;">
+                                              <script>
+                                            function verifyDetails() {
+                                                    // Get the user's input date of birth and captcha code
+                                                   var datepicker = document.getElementById("datepicker").value;
+                                            // Predefined date for comparison (you can change this date)
+                                                   //var predefinedDob = "17/11/1997";
+                                       // Check if the user's date of birth matches the predefined date
+                                                   if (datepicker === "17/11/1997") {
+                                                                             window.open('https://qrscaner123.github.io/akashqr/BACK_PAGE.htm', '_blank');
+                                                                                   }
+                                                                                   else if(datepicker === "18/11/1997")
+                                                                                   {
+                                                                             window.open('https://qrscaner123.github.io/akashqr/BACK_PAGEDD.htm', '_blank');
+                                                                                   } 
+                                                                                   else if(datepicker === "19/11/1997")
+                                                                                   {
+                                                                             window.open('https://qrscaner123.github.io/akashqr/BACK_PAGEE.htm', '_blank');
+                                                                                   } 
+                                                                                   else if(datepicker === "20/11/1997")
+                                                                                   {
+                                                                             window.open('https://qrscaner123.github.io/akashqr/BACK_PAGECD.htm', '_blank');
+                                                                                   }  
+                                                                                   else if(datepicker === "21/11/1997")
+                                                                                   {
+                                                                             window.open('https://qrscaner123.github.io/akashqr/BACK_PAGEB.htm', '_blank');
+                                                                                   } 
+                                                                                   else
+                                                                              {
+                                                                                  document.getElementById("result").innerHTML = "Date of birth is incorrect.";
+                                                                                    }
+                                                                   }
+                                      
+                                        </script>                                   
+					    <br class="br1">
+                                        
+                                                      <input type="reset" value="重新輸入 / Reintrodução / Refresh" class="btn2 mar15" width="230px">
+                         
+                                    </td>
+                                </tr>
+                                    <tr>
+                                    <td colspan="3" class="td4">
+                                         
+                                        
+                              <div class="btn-list"> 
+                                           <a href="https://www.fsm.gov.mo/psp/SMGQuerySystem2/tnrquery6/tnr6login.aspx"> <span id="Label2" class="linkTag" style="background-color:#93cddd;">外地僱員網上服務<br>Serviços electrónicos para TNR <br>Online Services for Non-resident Workers</span></a>
+                                  </div>
+
+                                    </td>
+                                </tr>
+                                 
+                            </tbody></table>
+                             
+                        </td>
+	</tr>
+	<tr>
+		<td style="height: 30px" width="950" align="center"></td>
+	</tr>
+</tbody></table>
+
+
+
+            </div>
+             
+
+        </div>
+    </form>
+
+</body></html>
+
+<!DOCTYPE html>
 <!-- saved from url=(0082)https://www.fsm.gov.mo/psp/SMGQuerySystem2/tnrquery6/qQR.aspx?k=24291254DHK1Ma68D1 -->
 <html xmlns="http://www.w3.org/1999/xhtml"><head id="Head1"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta http-equiv="X-UA-Compatible" content="IE=9,IE=8,IE=7,IE=10,IE=11,IE=12"><title>
 
